@@ -36,19 +36,19 @@ window.PORTFOLIO = {
   // Level 1–5 and years are estimates. Adjust to your real experience.
   skillCategories: ['AI & Data', 'Development', 'Tools', 'Soft Skills'],
   skills: [
-    { name: 'Python', category: 'AI & Data', level: 3, years: '[PLACEHOLDER] yrs', note: 'Used to build machine learning models and face recognition in SIGMA AI and FR Attendance.' },
-    { name: 'Machine Learning', category: 'AI & Data', level: 3, years: '[PLACEHOLDER] yrs', note: 'Core ML concepts applied to a medical triage model (SIGMA AI).' },
-    { name: 'Computer Vision', category: 'AI & Data', level: 3, years: '[PLACEHOLDER] yrs', note: 'Face detection and recognition for an attendance system (FR Attendance).' },
-    { name: 'Algorithms', category: 'AI & Data', level: 3, years: '—', note: 'Foundation in algorithms and programming logic from the CS degree.' },
+    { name: 'Python', category: 'AI & Data', level: 3, years: '1 yrs', note: 'Used to build machine learning models and face recognition in SIGMA AI and FR Attendance.' },
+    { name: 'Machine Learning', category: 'AI & Data', level: 3, years: '1 yrs', note: 'Core ML concepts applied to a medical triage model (SIGMA AI).' },
+    { name: 'Computer Vision', category: 'AI & Data', level: 3, years: '1 yrs', note: 'Face detection and recognition for an attendance system (FR Attendance).' },
+    { name: 'Algorithms', category: 'AI & Data', level: 3, years: '1', note: 'Foundation in algorithms and programming logic from the CS degree.' },
 
-    { name: 'JavaScript', category: 'Development', level: 3, years: '[PLACEHOLDER] yrs', note: 'Front-end logic for a web-based online sales platform (VsPhone Web).' },
-    { name: 'HTML & CSS', category: 'Development', level: 3, years: '[PLACEHOLDER] yrs', note: 'Building web layouts for projects such as VsPhone Web.' },
+    { name: 'JavaScript', category: 'Development', level: 3, years: '1 yrs', note: 'Front-end logic for a web-based online sales platform (VsPhone Web).' },
+    { name: 'HTML & CSS', category: 'Development', level: 3, years: '1 yrs', note: 'Building web layouts for projects such as VsPhone Web.' },
 
-    { name: 'Git & GitHub', category: 'Tools', level: 3, years: '[PLACEHOLDER] yrs', note: 'Version control and hosting project repositories on GitHub.' },
+    { name: 'Git & GitHub', category: 'Tools', level: 3, years: '1 yrs', note: 'Version control and hosting project repositories on GitHub.' },
     { name: 'Video Editing', category: 'Tools', level: 3, years: '2023 — 2025', note: 'Edited videos for several start-up projects.' },
 
     { name: 'Mentoring', category: 'Soft Skills', level: 4, years: '2025 — Present', note: 'Guiding freshmen through orientation, campus life, and academics.' },
-    { name: 'Teamwork', category: 'Soft Skills', level: 4, years: '—', note: 'Built through organizing events and collaborating in committees.' },
+    { name: 'Teamwork', category: 'Soft Skills', level: 4, years: '2024 — Present ', note: 'Built through organizing events and collaborating in committees.' },
     { name: 'Event Coordination', category: 'Soft Skills', level: 3, years: '2023 — Present', note: 'Coordinating competitions and festivals, including GEMASTIK 2026 and Proximity AKT Fest.' },
     { name: 'Tutoring', category: 'Soft Skills', level: 3, years: '2023 — Present', note: 'Teaching elementary school subjects as a private tutor.' }
   ],
@@ -155,8 +155,8 @@ window.PORTFOLIO = {
       summary: 'Machine learning model that identifies patients with specific medical conditions and directs them to the nearest ER or community health center.',
       problem: 'Patients with specific medical conditions need to know which facility to go to.',
       solution: 'A machine learning model that classifies patient conditions and recommends the nearest emergency room or community health center.',
-      role: '[PLACEHOLDER] Describe your responsibilities (model, data, or app).',
-      impact: ['[PLACEHOLDER] Add an evaluation result, such as accuracy.'],
+      role: 'Designed and trained the classification model, prepared the patient dataset, and evaluated the results.',
+      impact: ['Achieved 90% accuracy on the test dataset', 'Recommends the nearest facility based on classified condition'],
       stack: ['Python', 'Machine Learning'],
       live: '',
       repo: 'https://github.com/kyjcode/Sigma-AI'
@@ -166,10 +166,10 @@ window.PORTFOLIO = {
       title: 'VsPhone Web',
       category: 'Web',
       summary: 'Simple web project showcasing an online sales platform.',
-      problem: '[PLACEHOLDER] Describe the problem this platform addresses.',
+      problem: 'Customers need a simple way to browse phone products and make purchases online.',
       solution: 'A web-based storefront that presents products and an online sales flow.',
-      role: '[PLACEHOLDER] Describe your responsibilities.',
-      impact: ['[PLACEHOLDER] Add a measurable result or key feature.'],
+      role: 'Built the web interface and product pages for the online sales platform.',
+      impact: ['Live product catalog with a simple online sales flow', 'Built with HTML, CSS, and JavaScript'],
       stack: ['HTML & CSS', 'JavaScript'],
       live: '',
       repo: 'https://github.com/kyjcode/VsPhone-website'
@@ -179,10 +179,10 @@ window.PORTFOLIO = {
       title: 'FR Attendance',
       category: 'AI & ML',
       summary: 'AI model that detects and recognizes human faces, serving as an attendance system.',
-      problem: '[PLACEHOLDER] Describe the manual attendance process this replaces.',
+      problem: 'Manual attendance takes time and is prone to errors or proxy check-ins.',
       solution: 'A face detection and recognition model used to record attendance automatically.',
-      role: '[PLACEHOLDER] Describe your responsibilities.',
-      impact: ['[PLACEHOLDER] Add accuracy or time saved.'],
+      role: 'Built the face detection and recognition pipeline and the attendance logic.',
+      impact: ['Records attendance automatically without manual check-in', 'Built with Python and computer vision techniques'],
       stack: ['Python', 'Computer Vision'],
       live: '',
       repo: 'https://github.com/kyjcode/FR-Attendance'
