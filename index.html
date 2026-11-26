@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelvin Yohanes Justinus — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Kelvin Yohanes Justinus (Kaye), Full-Stack Developer and Computer Science student at BINUS University.">
+
+  <!-- Apply saved/system theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme') ||
+          (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="loader" class="loader" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <div class="loader-clouds" aria-hidden="true">
+      <span class="cloud c1"></span>
+      <span class="cloud c2"></span>
+      <span class="cloud c3"></span>
+      <span class="cloud c4"></span>
+      <span class="cloud c5"></span>
+      <span class="cloud c6"></span>
+      <span class="cloud c7"></span>
+      <span class="cloud c8"></span>
+    </div>
+    <div class="loader-inner">
+      <p class="loader-logo">KAYE</p>
+      <div class="loader-track" aria-hidden="true"><div id="loaderBar" class="loader-bar"></div></div>
+      <div class="loader-row">
+        <span>INITIALIZING</span>
+        <span id="loaderCount">0%</span>
+      </div>
+    </div>
+  </div>
+  <noscript><style>#loader { display: none; }</style></noscript>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Floating dock navigation -->
+  <header class="dock-wrap">
+    <nav class="dock" aria-label="Primary">
+      <a href="#hero" class="brand">Kelvin Yohanes Justinus<span>.</span></a>
+      <ul class="dock-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="dock-actions">
+        <span class="status"><span class="pulse" aria-hidden="true"></span>Open to work</span>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Switch color theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <button id="paletteBtn" class="icon-btn" type="button" aria-label="Open quick navigation (Ctrl+K)">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary">Hire me</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container bento">
+        <div class="card span-8 hero-main">
+          <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Available for work · Full-stack &amp; web</p>
+          <h1>Building <span class="gradient-text">full-stack</span> applications &amp; modern digital systems.</h1>
+          <p class="hero-lead" data-bind="profile.summary"></p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-magnetic" href="#projects">View projects</a>
+            <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener" data-cv>View CV</a>
+            <button class="btn" type="button" data-action="copy-email">Copy email</button>
+          </div>
+        </div>
+
+        <aside class="card span-4 id-card" aria-label="Profile summary">
+          <a class="binus-badge" href="https://binus.ac.id" target="_blank" rel="noopener" aria-label="BINUS University">
+            <img src="assets/images/binus.png" alt="" width="44" height="44">
+            <span class="binus-info">
+              <strong>BINUS University</strong>
+              <small>Computer Science · AI</small>
+            </span>
+          </a>
+          <div class="avatar-frame">
+              <img src="assets/images/Kaye.jpeg" alt="Portrait of Kelvin Yohanes Justinus" class="avatar" width="200" height="200">
+          </div>
+          <h2 class="name" data-bind="profile.name"></h2>
+          <p class="muted" data-bind="profile.role"></p>
+          <dl class="meta">
+            <div><dt>Location</dt><dd data-bind="profile.location"></dd></div>
+            <div><dt>Status</dt><dd data-bind="profile.availability"></dd></div>
+            <div><dt>GPA</dt><dd data-bind="profile.gpa"></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>About me</h2>
+        </header>
+        <div class="bento">
+          <article class="card span-8">
+            <p data-bind="profile.about"></p>
+            <ul class="principles" id="principles"></ul>
+          </article>
+          <article class="card span-4">
+            <h3>Focus</h3>
+            <dl class="focus" id="focusList"></dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Skills &amp; tech stack</h2>
+          <p class="muted">Pick a category, then hover or tap a skill to see how I've used it.</p>
+        </header>
+        <div class="bento">
+          <div class="card span-12">
+            <div class="tabs" id="skillTabs" role="tablist" aria-label="Skill categories"></div>
+          </div>
+          <div class="card span-7">
+            <div class="skill-grid" id="skillGrid"></div>
+          </div>
+          <div class="card span-5" id="skillDetail" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE + HIRING SUMMARY -->
+    <section id="experience" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Experience &amp; timeline</h2>
+        </header>
+        <div class="bento">
+          <div class="card span-7">
+            <ol class="timeline" id="timeline"></ol>
+          </div>
+          <aside class="card span-5" aria-labelledby="hiringTitle">
+            <p class="eyebrow">Hiring mode</p>
+            <h3 id="hiringTitle">Quick summary</h3>
+            <dl class="meta stacked">
+              <div><dt>Target role</dt><dd data-bind="profile.role"></dd></div>
+              <div><dt>Availability</dt><dd data-bind="profile.availability"></dd></div>
+              <div><dt>Location</dt><dd data-bind="profile.location"></dd></div>
+              <div><dt>Work types</dt><dd data-bind="profile.workTypes"></dd></div>
+            </dl>
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-action="copy-email">Copy email</button>
+              <a class="btn" href="assets/CV.pdf" target="_blank" rel="noopener" data-cv>View CV</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Selected projects</h2>
+        </header>
+        <div class="toolbar">
+          <div class="chips" id="projectFilters" role="group" aria-label="Filter by category"></div>
+          <label class="search">
+            <span class="sr-only">Search projects</span>
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" id="projectSearch" placeholder="Search title, tech or keyword…">
+          </label>
+        </div>
+        <p class="muted" id="projectCount" aria-live="polite"></p>
+        <div class="project-grid" id="projectGrid"></div>
+        <p class="card empty" id="projectEmpty" hidden>No projects match. Try another keyword or category.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+        <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="card contact-card">
+          <h2>Let's talk.</h2>
+          <p class="muted">Internship and full-time opportunities in full-stack development and software engineering.</p>
+          <ul class="contact-links">
+            <li><a href="#" data-mailto><i class="fa-regular fa-envelope" aria-hidden="true"></i><span data-bind="profile.email"></span></a></li>
+            <li><a href="#" data-bind-href="profile.links.linkedin" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a></li>
+            <li><a href="#" data-bind-href="profile.links.github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© 2026 Kelvin Yohanes Justinus · Built with vanilla HTML, CSS &amp; JS</p>
+      <a href="#hero">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Project case-study dialog -->
+  <dialog id="projectDialog" aria-labelledby="projectDialogTitle">
+    <div class="dialog-body" id="projectDialogBody"></div>
+  </dialog>
+
+  <!-- Command palette -->
+  <dialog id="palette" class="palette" aria-label="Quick navigation">
+    <div class="palette-inner">
+      <input id="paletteInput" type="text" placeholder="Jump to a section or run an action…"
+             role="combobox" aria-expanded="true" aria-controls="paletteList" aria-autocomplete="list">
+      <ul id="paletteList" role="listbox"></ul>
+      <p class="muted hint">↑ ↓ to move · Enter to run · Esc to close</p>
+    </div>
+  </dialog>
+    <!-- Photo lightbox -->
+  <dialog id="lightbox" class="lightbox" aria-label="Photo viewer">
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <a id="cvLink" href="assets/cv.pdf" target="_blank" rel="noopener" hidden></a>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/background.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/skills.js"></script>
+  <script src="assets/js/timeline.js"></script>
+  <script src="assets/js/palette.js"></script>
+
+
+</body>
+</html>
