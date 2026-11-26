@@ -5,7 +5,7 @@ window.PORTFOLIO = {
     role: 'Open to Work',
     targetRole: 'AI Engineering Intern',
     summary: 'Computer Science undergraduate at BINUS University specializing in Artificial Intelligence, with an active track record in campus organizations and a strong foundation in programming logic, algorithms, and core Machine Learning concepts.',
-    about: 'I am a Computer Science undergraduate specializing in Artificial Intelligence at BINUS University. I apply analytical thinking and the teamwork I built through campus organizations to AI projects, and I am looking for an AI Engineering internship where I can keep growing.',
+    about: 'Computer Science student at BINUS University with a focus on Artificial Intelligence, currently pursuing a degree. Interested in AI, app development, and web development, with an emphasis on building technology that is practical and useful. Works with discipline and a strong sense of responsibility, with solid communication skills and a range of soft skills developed through campus life. Experience in leadership and teamwork through mentoring and campus event coordination. Seeking an internship in software development, where the focus is on building and programming real solutions.',
     gpa : '[3.2/4.00]',
     location: 'Tangerang, Indonesia',
     availability: 'Open to work · Internship',
@@ -19,7 +19,11 @@ window.PORTFOLIO = {
 
   principles: [
     { title: 'Analytical thinking.', text: 'Applying programming logic and algorithms to practical problems.' },
-    { title: 'Teamwork.', text: 'Built through mentoring freshmen and coordinating campus events.' }
+    { title: 'Teamwork.', text: 'Built through mentoring freshmen and coordinating campus events.' },
+    { title: 'Discipline.', text: 'I stay consistent with my commitments and manage my time to meet deadlines.' },
+    { title: 'Responsibility.', text: 'I take ownership of assigned tasks, from coding projects to student guidance.' },
+    { title: 'Communication.', text: 'I explain technical ideas clearly and collaborate well across teams.' },
+    { title: 'Leadership.', text: 'I mentor others and coordinate people to reach a shared goal.' }
   ],
 
   focus: [
